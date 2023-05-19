@@ -4,6 +4,9 @@
   box-sizing: border-box; /* Para manter a dimensão correta de todos os boxes */
 }
 
+::root {
+  font-size: 16px; /* Referência padrão para toda a aplicação */
+}
 /* mecanismo de renderização utilizado nos navegadores) para customizando a scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -63,12 +66,12 @@ nav {
 
 .memory small {
   color: #bebebf;
-  font-size: 12px;
+  font-size: 0.75rem; /* Proporção do tamanho 12 em relação à dimensão definida em root. (12 / 16 = 0.75) */
   text-decoration: none;
 }
 
 .memory h1 {
-  font-size: 32px;
+  font-size: 2rem;
   color: #eaeaea;
 }
 
@@ -95,7 +98,7 @@ nav {
 }
 
 .memory p {
-  font-size: 18px;
+  font-size: 1.2rem;
   color: #bebebf;
   line-height: 28px;
 }
@@ -133,11 +136,37 @@ aside img:nth-child(2) {
 }
 
 aside p {
-  font-size: 32px;
+  font-size: 2rem;
   text-align: center;
 }
 
 aside span {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #9696a0;
+}
+
+@media (max-width: 768px) {
+:root {
+  font-size: 14px; /* PULO DO GATO: aqui mudamos a referência da root para os dispositivos móveis! */
+}
+
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.8fr;
+    grid-template-areas: 
+    "profile" /* SEM VÍRGULA entre os elementos */
+    "timeline";
+  }
+}
+
+/* A partir daqui, mesmo repetindo os elementos do body (aside e nav), as alterações só serão feitas 
+nos dipositivos dentro das regras definidas nos @media acima. */
+aside {
+  border: none;
+  padding: 32px 12px;
+}
+
+nav {
+  overflow-y: visible; /* Torna a barra de rolagem vísivel ao longo de toda viewport */
+  padding: 22px;
 }
