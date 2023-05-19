@@ -16,6 +16,7 @@ body {
 
 nav {
   padding: 64px;
+  grid-area: "timeline"; /* Definimos que a área da nav será a timeline (2º coluna) */
 }
 
 .memory {
@@ -47,4 +48,8 @@ nav {
   font-size: 18px;
   color: #bebebf;
   line-height: 28px;
+}
+
+aside {
+  grid-area: "profile"; /* Definimos que a área do aside será a profile (1º coluna)*/
 }
