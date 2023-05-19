@@ -8,6 +8,10 @@ body {
   background-color: #121215;
   color: #eaeaea;
   font-family: "Roboto", sans-serif;
+  display: grid; /* Aqui definimos que os elementos do body entrarão no grid */
+  grid-template-areas: "profile timeline"; /* Definimos os nomes paras as 2 colunas*/
+  grid-template-columns: 1fr 1fr; /* Áreas de cada coluna serão iguais e flexíveis*/
+  grid-template-rows: 100vh; /* Altura da view ocupará toda a área do viewport*/
 }
 
 nav {
