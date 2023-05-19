@@ -8,7 +8,7 @@ body {
   background-color: #121215;
   color: #eaeaea;
   font-family: "Roboto", sans-serif;
-  display: grid; /* Aqui definimos que os elementos do body entrarão no grid */
+  display: grid; /* Técnica em que podemos criar layouts através de colunas e linhas */
   grid-template-areas: "profile timeline"; /* Definimos os nomes paras as 2 colunas*/
   grid-template-columns: 1fr 1fr; /* Áreas de cada coluna serão iguais e flexíveis*/
   grid-template-rows: 100vh; /* Altura da view ocupará toda a área do viewport*/
@@ -17,7 +17,7 @@ body {
 nav {
   padding: 64px;
   grid-area: "timeline"; /* Definimos que a área da nav será a timeline (2º coluna) */
-  overflow-y: scroll ; /* Propriedade que faz com que o conteúdo que não cabe na vertical (y) habilite o scroll*/
+  overflow-y: scroll ; /* Propriedade que faz com que o conteúdo que não cabe na vertical (y) seja habilitado no scroll*/
 }
 
 .memory {
