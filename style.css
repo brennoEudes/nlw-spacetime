@@ -7,7 +7,7 @@
 ::root {
   font-size: 16px; /* Referência padrão para toda a aplicação */
 }
-/* mecanismo de renderização utilizado nos navegadores) para customizando a scrollbar */
+/* Mecanismo que permite a renderização e modificação dos elementos do navegador (ex: scrollbar) */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -25,7 +25,9 @@
 @keyframes entering {
   from {
     opacity: 0;
-    transform: translateY(-200px); /* O nº negativo significa que o elemento extrapola o tamanho da tela */
+    transform: translateY(
+      -200px
+    ); /* O nº negativo significa que o elemento extrapola o tamanho da tela */
   }
   to {
     opacity: 1;
@@ -92,6 +94,7 @@ nav {
 
 /* Colocado aqui próx. ao img para organizar o CSS seguindo a lógica de edição */
 .memory:hover img {
+  /* Aplica estilos a um elemento quando o cursor do mouse está sobre ele*/
   transform: scale(
     1.1
   ); /* Efeito que aumenta a imagem ao passar o cursor por cima dela */
@@ -120,7 +123,8 @@ aside {
   background-size: auto 100%; /* Se ajusta melhor a tela */
 }
 
-aside * { /* O asterisco define que somente os elementos dentro de aside receberão a animação */
+aside * {
+  /* O asterisco define que somente os elementos dentro de aside receberão a animação */
   animation: entering 0.7s ease-in-out;
 }
 
@@ -145,17 +149,19 @@ aside span {
   color: #9696a0;
 }
 
+/* Media query: Conjunto de regras que só serão aplicadas se a largura da tela do dispositivo 
+for menor ou igual a uma determinada dimensão */
 @media (max-width: 768px) {
-:root {
-  font-size: 14px; /* PULO DO GATO: aqui mudamos a referência da root para os dispositivos móveis! */
-}
+  :root {
+    font-size: 14px; /* PULO DO GATO: aqui mudamos a referência da root para os dispositivos móveis! */
+  }
 
   body {
     grid-template-columns: 1fr;
     grid-template-rows: 0.2fr 0.8fr;
-    grid-template-areas: 
-    "profile" /* SEM VÍRGULA entre os elementos */
-    "timeline";
+    grid-template-areas:
+      "profile" /* SEM VÍRGULA entre os elementos */
+      "timeline";
   }
 }
 
