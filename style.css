@@ -52,4 +52,27 @@ nav {
 
 aside {
   grid-area: "profile"; /* Definimos que a área do aside será a profile (1º coluna)*/
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinha tudo ao centro do eixo vertical*/
+  justify-content: center; /* Alinha tudo ao centro do eixo horizontal*/
+  gap: 20px;
+
+  border-right: 1px solid;
+  border-image: linear-gradient(#727275, #2c2c31) 1; /* Borda com gradiente e opacidade 1*/
+
+  background-image: url("./assets/background.svg"); /* Chamando a url via CSS*/
+  background-position: top right; /* Usa como referência para alinhamento a parte de cima e à direita */
+  background-repeat: no-repeat; /* Faz com que a imagem não se repita */
+  background-size: auto 100%; /* Se ajusta melhor a tela */
+}
+
+aside img:nth-child(2) {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%; /* IMPORTANTE: quando o raio da borda é a metade da largura e altura, forma-se uma circunferência */
+
+  border: 4px solid transparent;
+  background: linear-gradient(#d39e33, #ed5636, #633bbc) padding-box, /* Efeito grandiente!*/
+    linear-gradient(260deg, #d39e33, #ed5636, #633bbc) border-box; 
 }
