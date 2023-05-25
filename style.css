@@ -7,8 +7,9 @@
 ::root {
   font-size: 16px; /* Referência padrão para toda a aplicação */
 }
-/* Mecanismo que permite a renderização e modificação dos elementos do navegador (ex: scrollbar) */
+
 ::-webkit-scrollbar {
+  /* Mecanismo que permite a renderização e modificação dos elementos do navegador (ex: scrollbar) */
   width: 8px;
 }
 
